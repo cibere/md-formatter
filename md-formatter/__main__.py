@@ -302,7 +302,7 @@ def convert_file(filename: str, dont_index_tags) -> tuple[str, list[dict]]:
 
             cleanname = tag.text.replace("{id:x}".replace("x", txt), "")
 
-        if type_ not in dont_index_tags:
+        if not str(type_) in dont_index_tags:
             data["type"] = type_
             data["inner"] = txt
             data["raw"] = tag.text
