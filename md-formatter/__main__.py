@@ -280,6 +280,7 @@ def convert_file(filename: str, dont_index_tags) -> tuple[str, list[dict]]:
 
     translated = markdown.markdown(text)
     to_parse = BeautifulSoup(translated, "html.parser")
+    to_index = []
 
     # finding all h# tags
 
@@ -482,12 +483,15 @@ def cmd_gen_config():
 
     print("Inputs validated, generating code")
 
-    code = f"""
+    code = f'''"""
+This configuration is for the `md-formatter` program.
+"""
+    
 title = "{title}"
 underline_h_tags = {underline_h_tags}
 dont_index_tags = {dont_index_tags}
 dont_indent_tags = {dont_indent_tags}
-"""
+'''
 
     print("Code generated, writing to file")
 
