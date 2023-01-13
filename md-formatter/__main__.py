@@ -231,6 +231,32 @@ DEFAULT_HTML_CODE = """<html>
         .index-item-6 {
             margin-left: 50%;
         }
+        
+        
+        
+        .h-indent-1 {
+            margin-left: 0%;
+        }
+
+        .h-indent-2 {
+            margin-left: 10%;
+        }
+
+        .h-indent-3 {
+            margin-left: 20%;
+        }
+
+        .h-indent-4 {
+            margin-left: 30%;
+        }
+
+        .h-indent-5 {
+            margin-left: 40%;
+        }
+
+        .h-indent-6 {
+            margin-left: 50%;
+        }
 
         .footer {
             background-color: black;
@@ -349,7 +375,7 @@ def parse(*files: str):
         print("Configuration done. working on files now...")
 
     H_TAG = """
-    <div class="index-item-{type_}">
+    <div class="h-indent-{type_}">
         <h{type_} id='{name}' class="htag">
             <a href="#{name}" class="nr">
                 {inner}
