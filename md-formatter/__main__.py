@@ -375,7 +375,7 @@ def parse(*files: str):
         print("Configuration done. working on files now...")
 
     H_TAG = """
-    <div class="h-indent-{type_}">
+    <div class="index-item-{type_}">
         <h{type_} id='{name}' class="htag">
             <a href="#{name}" class="nr">
                 {inner}
