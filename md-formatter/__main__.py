@@ -426,7 +426,7 @@ def parse(*files: str):
         else:
             foo = True
         if int(tag["type"]) in dont_indent_tags:
-            format_ = format_.replace(f'<div class="index-item-{tag["type"]}">', "")
+            format_ = format_.replace(f'<div class="h-indent-{tag["type"]}">', "")
             format_ = format_.replace("</div>", "")
 
         after_parse = after_parse.replace(
