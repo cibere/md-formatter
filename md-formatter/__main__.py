@@ -375,14 +375,14 @@ def parse(*files: str):
         print("Configuration done. working on files now...")
 
     H_TAG = """
-    <div class="index-item-{type_}">
+    <div class="h-indent-{type_}">
         <h{type_} id='{name}' class="htag">
             <a href="#{name}" class="nr">
                 {inner}
             </a>
         </h{type_}>
     </div>
-    <div class="index-item-{type_}">
+    <div class="h-indents-{type_}">
     """
 
     if underline_h_tags:
